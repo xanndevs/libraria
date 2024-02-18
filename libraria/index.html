@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Libraria</title>
+    </head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 2fr 1fr;
+            grid-template-rows: 1.5fr 1.5fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                'BookList BookList AppMenu'
+                'BookList BookList AppMenu'
+                'RelativeOperations RelativeOperations RelativeOperations';
+        }
+
+        .BookList {
+            grid-area: BookList;
+        }
+
+        .RelativeOperations {
+            grid-area: RelativeOperations;
+        }
+
+        .AppMenu {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 7fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                'TitleBar'
+                'Functions';
+            grid-area: AppMenu;
+        }
+
+        .TitleBar {
+            grid-area: TitleBar;
+        }
+
+        .Functions {
+            grid-area: Functions;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="BookList"></div>
+            <div class="RelativeOperations"></div>
+            <div class="AppMenu">
+                <div class="TitleBar">Libraria</div>
+                <div class="Functions"></div>
+            </div>
+        </div>
+    </body>
+</html>

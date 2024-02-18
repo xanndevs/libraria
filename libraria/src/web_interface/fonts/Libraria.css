@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Libraria';
+    src: url('UniSansHeavyCAPS.woff2') format('woff2'),
+        url('UniSansHeavyCAPS.woff') format('woff'),
+        url('UniSansHeavyCAPS.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libraria';
+    src: url('UniSansThinCAPS.woff2') format('woff2'),
+        url('UniSansThinCAPS.woff') format('woff'),
+        url('UniSansThinCAPS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
