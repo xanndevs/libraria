@@ -1,4 +1,4 @@
-## Library - A Library Management System
+## Libraria - A Library Management System
 
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **TODOS**
 
