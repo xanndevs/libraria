@@ -3,11 +3,11 @@ Kim Bewell,Arthur Arthurson,2010,502
 Sleepin' Sad Cuz You Are Gone,Just Brian,2021,103
 How to Make Money (Fast),Eric Liabert,2019,243
 Fitting into None Lives,Stephan Baker,1978,862
-Jon asks question about Kacie,Bad Romance,2023,363
+I asked questions about Kacie,Bad Romance,2023,363
 Dummy Book,Dummy Author,0,0
 Dummy Book,Dummy Author,0,0
 Dummy Book,Dummy Author,0,0
 Dummy Book,Dummy Author,0,0
 Dummy Book,Dummy Author,0,0
 Dummy Book,Dummy Author,0,0
-booksname,author ,3456,2345
+booksname,author,3456,2345
