@@ -1,6 +1,6 @@
 import os
 import time
-from .helper import get_book_input
+from .helper import get_book_input, blue_line
 
 class Library:
     #Constructor for the Library class
@@ -14,12 +14,11 @@ class Library:
 
     #Deconstructor for the Library class
     def __del__(self):
-        print("-" * 77)
+        blue_line()
 
         #Closes the file
         self.books_file.close()
-        print("Libraria is closing...")
-        
+
     def read_file_content(self):
         #The list we are gonna store the books before putting them into a list
         books = []
@@ -43,23 +42,24 @@ class Library:
     def list_books(self):
 
         books = self.read_file_content()
-        print("-" * 77)
-        print("  ID  |{} Book Name{}|{} Author{}|{} Year{}|{} Page".format(8 * " ",13 * " ",5 * " ",9 * " ",""," " * 4,""))
+        blue_line()
+
+        print("\033[1;94m  ID  |{} Book Name{}|{} Author{}|{} Year{}|{} Page\033[0m".format(8 * " ",13 * " ",5 * " ",9 * " ",""," " * 4,""))
         id = 0;
         for line in books:
-            string =  " " + str(id) + " " * (5 - len(str(id))) + "| "
-            id+=1
-            string += line[0] + ((30 - len(line[0])) * " " + "| ")
-            string += line[1] + ((20 - len(line[1])) * " " + "| ")
-            string += line[2] + ((8 - len(line[2])) * " " + "| ")
+            string =  " " + str(id) + " " * (5 - len(str(id))) + "\033[1;94m|\033[0m "
+            string += line[0] + ((30 - len(line[0])) * " " + "\033[1;94m|\033[0m ")
+            string += line[1] + ((20 - len(line[1])) * " " + "\033[1;94m|\033[0m ")
+            string += line[2] + ((8 - len(line[2])) * " " + "\033[1;94m|\033[0m ")
             string += line[3] + ((8 - len(line[3])) * " ")
             print(string)
+            id+=1
         return ""
 
 
     def add_books(self):
 
-        print("-" * 77)
+        blue_line()
 
         title,author,release_year,page_number = get_book_input()
 
@@ -70,7 +70,8 @@ class Library:
         return "Book has been successfully added to the list!"
 
     def remove_books(self):
-        print("-" * 77)
+        blue_line()
+
         books = self.read_file_content()
         title = ""
         while(title == ""):
@@ -94,6 +95,9 @@ class Library:
             string = ""
             for book in books:
                 if(book[0] == title):
+                    if bookfound:
+                        string += f"{book[0]},{book[1]},{book[2]},{book[3]}"
+                        string += "\n"
                     bookfound = True
                 else:
                     string += f"{book[0]},{book[1]},{book[2]},{book[3]}"
@@ -101,10 +105,11 @@ class Library:
             #Removes the last \n
             string = string[:-1]
             returnText = f"The book '{title}' removed from the database!" if bookfound else f"Specified book '{title}' does not exist!"
-        with open(self.file_name, 'w', encoding='utf-8') as file:
-            file.write(string)
-            file.flush()
+        
+        if(bookfound):
+            with open(self.file_name, 'w', encoding='utf-8') as file:
+                file.write(string)
+                file.flush()
+        
         #return string
         return returnText
-
-        return "FUCK"
