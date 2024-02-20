@@ -18,6 +18,8 @@ Now you can run the program by running;
 
 `python main.py`
 
+![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTUzb3Y1bHg0ZjV6ZnVmaGtxNGtsaTh6Mm9tc3F5N3ZoN3VwZ2toOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/INqdnpLCAbqP3xQ2db/giphy.gif)
+
 ### **Usage**
 
 ---
