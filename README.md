@@ -1,8 +1,10 @@
+## Libraria - A Library Management System
+
 ### **Installation**
 
 ---
 
-Run the setup.py with the code;
+Run the setup.py with the specified code;
 
 `python setup.py`
 
