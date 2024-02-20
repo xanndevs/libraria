@@ -4,6 +4,12 @@
 
 ---
 
+Clone repository into your local file system
+
+`git clone https://github.com/xanndevs/libraria.git`
+
+`cd libraria`
+
 Run the setup.py with the specified code;
 
 `python setup.py`
